@@ -1,7 +1,7 @@
 module.exports = {
   entry: ['@babel/polyfill', './src/main.js', './src/listRepos.js'],
   output: {
-    path: __dirname + '/public',
+    path: __dirname,
     filename: 'bundle.js'
   },
   devServer: {
