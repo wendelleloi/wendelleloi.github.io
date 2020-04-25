@@ -1,7 +1,7 @@
 <template lang="pug">
   #the-header
     .title
-      h1 Eu sou Wendell Eloi.
+      h1 Wendell Eloi.
       h2: span Desenvolvedor Web.
 </template>
 
@@ -48,7 +48,7 @@ export default {
       h2 {
         text-align: end;
         span {
-          padding-bottom: 10px;
+          /* padding-bottom: 10px; */
           border-bottom: 5px solid $cor-verde;
         }
         @include media('<=tablet') {

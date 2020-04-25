@@ -23,9 +23,10 @@ export default {
       }
       padding: 0 150px;
       font-size: 32px;
+      line-height: 40px;
 
       span {
-        padding-bottom: 10px;
+        /* padding-bottom: 10px; */
         border-bottom: 5px solid $cor-verde;
         @include media('<=tablet') {
           padding: 0;

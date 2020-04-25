@@ -23,6 +23,11 @@ export default {
 <style lang="scss">
   .about-bg{
     background-color: #fff;
+    height: 100vh;
+    display: flex;
+    @include media('<=tablet') {
+      display: contents;
+    }
   }
   #about {
     display: flex;
@@ -43,9 +48,10 @@ export default {
     .about-img, .sobre-mim {
       width: 50%;
       height: 100%;
-      padding: 0 10px;
+      /* padding: 0 10px; */
       @include media('<tablet') {
-        width: 100%;
+        width: 90%;
+        padding: 0 10px;
       }
     }
     .about-img {
@@ -54,8 +60,8 @@ export default {
         height: 300px;
         width: 300px;
         @include media('<tablet') {
-          height: 100%;
-          width: 100%;
+          height: 70%;
+          width: 70%;
         }
       }
     }
