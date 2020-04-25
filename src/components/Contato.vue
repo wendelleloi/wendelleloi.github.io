@@ -1,66 +1,74 @@
 <template lang="pug">
-  #contato
-    TitleH2 Meu Contato
-    .about-me
-      .sobre-mim
-        h2 Quem sou eu ?
-        p Potiguar, estudante de Ciências e Tecnologia na UFRN, técnico em informática para internet pelo Instituto Metrópole Digital,
-          |  amante de Design, UX e principalmente desenvolvimento Web.
+  TheContainer.contato-bg
+    #contato
+      TitleH2 Meu Contato
+      h2 Encontre-me na rede e vamos conversar.
+      .contact-info
+        .contact-option(v-for="(social, index) in socialMidia" :key="index")
+          MediaSocial(:title="social.title" :icon="social.icon" :link="social.link" :label="social.label")
 </template>
 
 <script>
 export default {
   components: {
     TheContainer: () => import('./TheContainer'),
-    TitleH2: () => import('./TitleH2')
+    TitleH2: () => import('./TitleH2'),
+    MediaSocial: () => import('./MediaSocial')
+  },
+  data () {
+    return {
+      socialMidia: [
+        {
+          title: 'clique aqui para me mandar um Whats',
+          icon: 'fa-whatsapp',
+          label: '(84) 99457-8751',
+          link: 'https://api.whatsapp.com/send?phone=5584994875751&text=Olá,%20Vamos%20conversar.'
+        },
+        {
+          title: 'clique aqui para acessar meu Instagram',
+          icon: 'fa-instagram',
+          label: 'wendell_eloi',
+          link: 'https://www.instagram.com/wendell_eloi/'
+        },
+        {
+          title: 'clique aqui para acessar meu Lindekin',
+          icon: 'fa-linkedin',
+          label: 'wendell eloi',
+          link: 'https://www.linkedin.com/in/wendell-eloi-1a5324168/'
+        },
+        {
+          title: 'clique aqui para acessar meu Github',
+          icon: 'fa-github',
+          label: 'wendelleloi',
+          link: 'https://github.com/wendelleloi'
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style lang="scss">
+  .contato-bg{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(66,185,131,1) 100%);
+  }
   #contato {
+    height: 80vh;
     padding: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgb(66,185,131);
-    /* background: linear-gradient(180deg, rgba(66,185,131,1) 0%, rgba(255,255,255,1) 95%); */
-    .about-me {
+    @include media('<tablet') {
+      height: auto;
+    }
+    .contact-info {
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      width: 100%;
-      @include media('<tablet') {
-        flex-direction: column;
-        align-items: center;
+      flex-wrap: wrap;
+      .contact-option {
+        margin: 10px;
       }
-    }
-    .about-img, .sobre-mim {
-      width: 50%;
-      height: 100%;
-      padding: 0 10px;
-      @include media('<tablet') {
-        width: 100%;
-      }
-    }
-    .about-img {
-      img {
-        border-radius: 100%;
-        height: 300px;
-        width: 300px;
-        @include media('<tablet') {
-          height: 100%;
-          width: 100%;
-        }
-      }
-    }
-    .sobre-mim {
-      overflow-wrap: break-word;
-      font-size: 22px;
-    }
-    .coisas-que-gosto {
-      overflow-wrap: break-word;
     }
   }
 </style>

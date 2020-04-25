@@ -3,7 +3,7 @@
     TheHeader
     About
     Skills
-    //- Contato
+    Contato
 </template>
 
 <script>

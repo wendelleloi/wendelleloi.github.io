@@ -85,7 +85,7 @@ export default {
     .techs-tool {
       display: flex;
       width: 100%;
-      background: $cor-branca;
+      /* background: $cor-branca; */
       @include media('<tablet') {
         flex-direction: column;
       }
