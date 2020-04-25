@@ -68,6 +68,9 @@ export default {
       flex-wrap: wrap;
       .contact-option {
         margin: 10px;
+        @include media('<tablet') {
+          width: 100%;
+        }
       }
     }
   }
