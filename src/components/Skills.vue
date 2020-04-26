@@ -3,7 +3,7 @@
     #skills
       TitleH2 Minhas principais habilidades
       template(v-for="skill in skills")
-        Skill(:progres="skill.level" :skill="skill.label")
+        Skill(:progres="skill.level" :skill="skill.label" :enter="effect")
       .techs-tool
         .techs-list
           TitleH2 Outras tecnologias que gosto
@@ -69,7 +69,21 @@ export default {
         {
           label: 'Trello'
         }
-      ]
+      ],
+      effect: false
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.catchScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.catchScroll)
+  },
+  methods: {
+    catchScroll () {
+      const element = document.getElementById('section-skill')
+      const pastTopOffset = window.pageYOffset >= element.offsetTop - 100
+      this.effect = pastTopOffset
     }
   }
 }

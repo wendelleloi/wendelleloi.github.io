@@ -2,7 +2,8 @@
   #app
     TheHeader
     About
-    Skills
+    section#section-skill
+      Skills
     Contato
 </template>
 
@@ -22,6 +23,10 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }

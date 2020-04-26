@@ -1,12 +1,12 @@
 <template lang="pug">
   TheContainer.about-bg
     #about
-      TitleH2 Sobre mim
+      TitleH2 Quem sou ?
       .about-me
         .about-img
           img(src="./../assets/foto_perfil.png")
         .sobre-mim
-          h2 Quem sou eu ?
+          //- h2 Quem sou eu ?
           p Potiguar, estudante de Ciências e Tecnologia na UFRN, técnico em informática para internet pelo Instituto Metrópole Digital,
             |  amante de Design, UX e principalmente desenvolvimento Web.
 </template>

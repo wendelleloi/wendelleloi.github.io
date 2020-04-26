@@ -6,9 +6,12 @@
       .contact-info
         .contact-option(v-for="(social, index) in socialMidia" :key="index")
           MediaSocial(:title="social.title" :icon="social.icon" :link="social.link" :label="social.label")
+      .back-top
+        a(href="#" @click.prevent="scrollTop" title="Voltar ao topo")
+          i.fa.fa-angle-up
       .copyright
         p Desenvolvido por
-        | <span> Wendell Eloi. </span>
+        | <span> <a href="https://github.com/wendelleloi" target="_blank" title="Wendell Eloi">Wendell Eloi.</a></span>
 </template>
 
 <script>
@@ -47,6 +50,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    scrollTop () {
+      window.scroll(0, 0)
+    }
   }
 }
 </script>
@@ -77,9 +85,24 @@ export default {
       }
     }
     .copyright {
-      margin: 10rem auto 0;
+      margin: 1rem auto 0;
       span {
         font-weight: bold;
+        a {
+          color: $cor-cinza;
+          text-decoration: none;
+        }
+      }
+    }
+    .back-top {
+      margin: 10rem auto 0;
+      a {
+        padding: 20px;
+        i {
+          color: $cor-cinza;
+          font-size: 22px;
+          font-weight: bold;
+        }
       }
     }
   }

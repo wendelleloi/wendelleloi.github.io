@@ -7,28 +7,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      offset: 400,
-      effect: false
-    }
-  },
-  mounted () {
-    const element = document.getElementById('the-header')
-    this.offset = element.clientHeight / 2.5
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.catchScroll)
-  },
-  methods: {
-    scrollTop () {
-      window.scroll(0, 0)
-    },
-    catchScroll () {
-      const pastTopOffset = window.pageYOffset > parseInt(this.offset)
-      this.effect = pastTopOffset
-    }
-  }
 }
 </script>
 
