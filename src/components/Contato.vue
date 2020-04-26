@@ -6,6 +6,9 @@
       .contact-info
         .contact-option(v-for="(social, index) in socialMidia" :key="index")
           MediaSocial(:title="social.title" :icon="social.icon" :link="social.link" :label="social.label")
+      .copyright
+        p Desenvolvido por
+        | <span> Wendell Eloi. </span>
 </template>
 
 <script>
@@ -71,6 +74,12 @@ export default {
         @include media('<tablet') {
           width: 100%;
         }
+      }
+    }
+    .copyright {
+      margin: 10rem auto 0;
+      span {
+        font-weight: bold;
       }
     }
   }
