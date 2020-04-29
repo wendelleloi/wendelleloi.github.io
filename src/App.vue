@@ -2,6 +2,8 @@
   #app
     TheHeader
     About
+    section#section-experience
+      Experiencia
     section#section-skill
       Skills
     Contato
@@ -17,7 +19,8 @@ export default {
     TheHeader: () => import('./components/TheHeader.vue'),
     About: () => import('./components/About.vue'),
     Skills: () => import('./components/Skills.vue'),
-    Contato: () => import('./components/Contato.vue')
+    Contato: () => import('./components/Contato.vue'),
+    Experiencia: () => import('./components/Experiencia.vue')
   }
 }
 </script>

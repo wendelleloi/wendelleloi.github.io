@@ -23,11 +23,7 @@ export default {
 <style lang="scss">
   .about-bg{
     background-color: #fff;
-    height: 100vh;
     display: flex;
-    @include media('<=tablet') {
-      display: contents;
-    }
   }
   #about {
     display: flex;

@@ -82,7 +82,7 @@ export default {
   methods: {
     catchScroll () {
       const element = document.getElementById('section-skill')
-      const pastTopOffset = window.pageYOffset >= element.offsetTop - 100
+      const pastTopOffset = window.pageYOffset >= element.offsetTop - 200
       this.effect = pastTopOffset
     }
   }

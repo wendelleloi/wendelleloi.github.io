@@ -65,7 +65,6 @@ export default {
     background: linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(66,185,131,1) 100%);
   }
   #contato {
-    height: 80vh;
     padding: 35px;
     display: flex;
     align-items: center;
